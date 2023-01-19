@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break Continue - Javascript</title>
+    <script src="breakContinue.js"></script>
+</head>
+
+<body>
+    <button src="breakContinue.js" onclick="Break()">coba di click</button>
+    <button src="breakContinue.js" onclick="bilanganGanjil()">Masukkan Bilangan anda</button>
+
+    <button onclick="Angka()">Silahkan Di Coba!</button>
+    <button onclick="bilanganGenap()">Masukkan bilangan kamu</button>
+
+    <script>
+        // penggunaan break
+
+        function Angka() {
+            let angka = prompt('Silahkan Di Coba : ')
+
+            for (let persamaan = 1; index < angka; index++) {
+                // melakukan pengkondisian ketika habis di bagi 2 maka akanmenampilkan bilangan tersebut adalah genap 
+                if (angka % 2 === 0) {
+                    // menampilkan hasil output
+                    document.writeln(`${angka} adalah bilangan genap`);
+
+                    // serta melanjutkan bilangan setelahnya
+                    break;
+
+                    // ketika habis dibagi 1 maka akan menampilkan bilangan tersebut adalah bilangan ganjil
+                } else {
+                    // menampilkan hasil output
+                    document.writeln(`${angka} adalah bilangan ganjil`);
+
+                    // serta melanjutkan bilangan setelahnya sampai batas nya yaitu 75
+                    break;
+                }
+            }
+        }
+
+        function bilanganGenap() {
+            let genap = prompt('Masukkan bilangan kamu : ');
+
+            for (let persamaan = 0; persamaan < genap; persamaan++) {
+                if (persamaan % 3 == 1) {
+                    continue;
+                }
+                document.writeln(`<p>${persamaan} adalah bilangan genap</p>`);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
